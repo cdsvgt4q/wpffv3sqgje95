@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ver gratis 'La isla de las tentaciones' 8 | LIDLT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 50% 50%,
+          #1a1a1a,
+          #0d0d0d,
+          #000000
+        );
+        background-size: 300% 300%;
+        animation: bgMove 10s infinite alternate;
+      }
 
+      @keyframes bgMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+
+      .fade-out {
+        animation: fadeOut 1s ease-in-out forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 1s;
+      }
+      .delay-2 {
+        animation-delay: 2s;
+      }
+      .delay-3 {
+        animation-delay: 3s;
+      }
+      .delay-4 {
+        animation-delay: 4s;
+      }
+      .delay-5 {
+        animation-delay: 5s;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="h-screen flex items-center justify-center text-white">
+    <div id="text-container" class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold opacity-0 fade-in">
+        Okay guys
+      </h1>
+      <h1 class="text-4xl md:text-6xl font-bold opacity-0 fade-in delay-1">
+        We're back
+      </h1>
+      <h1 class="text-4xl md:text-6xl font-bold opacity-0 fade-in delay-2">
+        Did you miss us?
+      </h1>
+      <h1 class="text-4xl md:text-6xl font-bold opacity-0 fade-in delay-3">
+        Cause we missed you
+      </h1>
+    </div>
+
+    <div id="final-text" class="hidden text-center">
+      <!-- <h1 class="text-5xl md:text-7xl font-bold fade-in delay-4">
+        Ahora somos isladelastentaciones.es
+      </h1> -->
+      <h1 class="text-5xl md:text-7xl font-bold fade-in delay-4">
+        La isla de las tentaciones 8 🐍
+      </h1>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        document.getElementById("text-container").classList.add("fade-out");
+        setTimeout(() => {
+          document.getElementById("text-container").classList.add("hidden");
+          document.getElementById("final-text").classList.remove("hidden");
+        }, 1000);
+      }, 4000);
+    </script>
+  </body>
+</html>
